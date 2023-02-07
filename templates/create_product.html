@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block bl1 %}
+<div class="container">
+    <div class="row justify-content-md-center ">  
+        <div class="col col-4 bg-primary ">      
+    
+            <form method="post" >
+                <div class="form-group">
+                    <label for="exampleInputPassword1"><h4>Название товара</h4></label>
+                    <input type="text" class="form-control" id="product_title" name="product_title" placeholder="Название товара">
+                    
+                </div>
+                    <div class="form-group">
+                    <label for="exampleInputPassword1"><h4>Цена</h4></label>
+                    <input type="number" class="form-control" id="product_price" name="product_price" placeholder="Цена">
+                </div>
+                    <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="is_active" name="is_active" value="1">
+                    <label class="form-check-label" for="exampleCheck1">Товар в наличии</label>
+                </div>
+                <button type="submit" class="btn bg-success">Добавить</button>
+            </form>
+         </div>
+    </div>
+</div>
+
+
+{% endblock  %}

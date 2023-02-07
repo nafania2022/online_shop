@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block bl1 %}
+
+<div class="b-example-divider"></div>
+<div class="container text-center">
+    
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        
+        {% for info  in items %}
+        <div class="col">
+            
+            <div class="card mb-4 rounded-3 shadow-sm">
+               
+                <div class="card-header py-3">                
+                    <h4 class="my-0 fw-normal">{{info.product_title}}</h4>
+                 </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">{{info.product_price}}<small class="text-muted fw-light"> рублей</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>
+                            {% if info.is_active == True %}
+                            <p class="card-text">Наличие на складе : Есть  </p>
+                            {% else %}
+                            <p class="card-text">Наличие на складе : Нет  </p>
+                            {% endif %}
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <a href="/buy/{{info.id}}" type="button" class="w-100 btn btn-lg btn-outline-primary" >Купить</a>
+                </div>
+               
+            </div>
+        </div>
+        {% endfor %} 
+    </div>
+</div>
+    
+  
+      
+  
+    
+
+
+
+{% endblock  %}
